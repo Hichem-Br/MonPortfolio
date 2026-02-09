@@ -1,0 +1,2643 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="">
+  <link id="builder-default-fonts"
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&amp;family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&amp;family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&amp;display=swap"
+    rel="stylesheet">
+  <link id="builder-font-roboto"
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap"
+    rel="stylesheet">
+  <link id="builder-font-raleway"
+    href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+    rel="stylesheet">
+  <link id="builder-font-poppins"
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+    rel="stylesheet">
+
+  <style id="builder-fonts-styles"></style>
+  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.css?v=18">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.css?v=18">
+  <style id="builder-vendors-styles"></style>
+  <style id="builder-general-css">
+    :root {
+      --default-font: Roboto, system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+      --heading-font: Raleway;
+      --nav-font: Poppins;
+      --background-color: #000000;
+      --default-color: #fafafa;
+      --heading-color: #ffffff;
+      --accent-color: #18d2ab;
+      --surface-color: #1a1a1a;
+      --contrast-color: #000000;
+      --nav-color: #fafafa;
+      --nav-hover-color: #18d29d;
+      --nav-mobile-background-color: #1a1a1a;
+      --nav-dropdown-background-color: #1a1a1a;
+      --nav-dropdown-color: #fafafa;
+      --nav-dropdown-hover-color: #18d29d;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      color: var(--default-color);
+      background-color: var(--background-color);
+      font-family: var(--default-font);
+    }
+
+    a {
+      color: var(--accent-color);
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    a:hover {
+      color: color-mix(in srgb, var(--accent-color), transparent 25%);
+      text-decoration: none;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: var(--heading-color);
+      font-family: var(--heading-font);
+    }
+
+    section,
+    .section {
+      color: var(--default-color);
+      background-color: var(--background-color);
+      padding: 60px 0;
+      scroll-margin-top: 100px;
+      overflow: clip;
+    }
+
+    @media (max-width: 1199px) {
+
+      section,
+      .section {
+        scroll-margin-top: 66px;
+      }
+    }
+
+    .section-title {
+      padding-bottom: 60px;
+      position: relative;
+    }
+
+    .section-title h2 {
+      font-size: 14px;
+      font-weight: 500;
+      padding: 0;
+      line-height: 1px;
+      margin: 0;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: color-mix(in srgb, var(--default-color), transparent 50%);
+      position: relative;
+    }
+
+    .section-title h2::after {
+      content: "";
+      width: 120px;
+      height: 1px;
+      display: inline-block;
+      background: var(--accent-color);
+      margin: 4px 10px;
+    }
+
+    .section-title div {
+      color: var(--heading-color);
+      margin: 0;
+      margin: 0;
+      font-size: 28px;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-family: var(--heading-font);
+    }
+
+    .page-title {
+      color: var(--default-color);
+      background-color: var(--background-color);
+      position: relative;
+    }
+
+    .page-title .heading {
+      padding: 160px 0 80px 0;
+      border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+    }
+
+    .page-title .heading h1 {
+      font-size: 38px;
+      font-weight: 700;
+    }
+
+    .page-title nav {
+      background-color: color-mix(in srgb, var(--default-color), transparent 90%);
+      padding: 20px 0;
+    }
+
+    .page-title nav ol {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      margin: 0;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .page-title nav ol li+li {
+      padding-left: 10px;
+    }
+
+    .page-title nav ol li+li::before {
+      content: "/";
+      display: inline-block;
+      padding-right: 10px;
+      color: color-mix(in srgb, var(--default-color), transparent 70%);
+    }
+
+    .widgets-container {
+      background-color: var(--surface-color);
+      padding: 30px;
+      margin: 60px 0 30px 0;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .widget-title {
+      color: var(--heading-color);
+      font-size: 20px;
+      font-weight: 700;
+      padding: 0;
+      margin: 0 0 20px 0;
+    }
+
+    .widget-item {
+      margin-bottom: 40px;
+    }
+
+    .widget-item:last-child {
+      margin-bottom: 0;
+    }
+  </style>
+  <style id="builder-general-styles"></style>
+  <style id="builder-color-presets-css">
+    [data-colorpreset="cp-light-background"],
+    .light-background {
+      --background-color: #1a1a1a;
+      --surface-color: #343434;
+    }
+
+    [data-colorpreset="cp-dark-background"],
+    .dark-background {
+      --background-color: rgba(15, 15, 15, 0.975);
+      --default-color: #ffffff;
+      --heading-color: #ffffff;
+      --surface-color: #292929f9;
+      --contrast-color: #000000;
+    }
+  </style>
+  <style id="header-style">
+    .header {
+      color: var(--default-color);
+      background-color: var(--background-color);
+      padding: 15px 0;
+      transition: all 0.5s;
+      z-index: 997;
+    }
+
+    .header .logo {
+      line-height: 1;
+    }
+
+    .header .logo img {
+      max-height: 32px;
+      margin-right: 8px;
+    }
+
+    .header .logo h1 {
+      font-size: 30px;
+      margin: 0;
+      font-weight: 700;
+      color: var(--heading-color);
+    }
+
+    .scrolled .header {
+      box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+  <style id="header-colors">
+    .header {
+      --background-color: rgba(0, 0, 0, 0);
+      --nav-color: #fafafa;
+      --nav-hover-color: #18d2ab;
+      --nav-mobile-background-color: #1a1a1a;
+      --nav-dropdown-background-color: #1a1a1a;
+      --nav-dropdown-color: #fafafa;
+      --nav-dropdown-hover-color: #18d2ab;
+    }
+
+    .scrolled .header {
+      --background-color: rgba(0, 0, 0, 0.8);
+    }
+  </style>
+  <style id="nav-style">
+    /* Desktop Navigation */
+    @media (min-width: 1200px) {
+      .navmenu {
+        padding: 0;
+      }
+
+      .navmenu ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        list-style: none;
+        align-items: center;
+      }
+
+      .navmenu li {
+        position: relative;
+      }
+
+      .navmenu>ul>li {
+        white-space: nowrap;
+        padding: 15px 14px;
+      }
+
+      .navmenu>ul>li:last-child {
+        padding-right: 0;
+      }
+
+      .navmenu a,
+      .navmenu a:focus {
+        color: var(--nav-color);
+        font-size: 15px;
+        padding: 0 2px;
+        font-family: var(--nav-font);
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        white-space: nowrap;
+        transition: 0.3s;
+        position: relative;
+      }
+
+      .navmenu a i,
+      .navmenu a:focus i {
+        font-size: 12px;
+        line-height: 0;
+        margin-left: 5px;
+        transition: 0.3s;
+      }
+
+      .navmenu>ul>li>a:before {
+        content: "";
+        position: absolute;
+        height: 2px;
+        bottom: -6px;
+        left: 0;
+        background-color: var(--nav-hover-color);
+        visibility: hidden;
+        width: 0px;
+        transition: all 0.3s ease-in-out 0s;
+      }
+
+      .navmenu a:hover:before,
+      .navmenu li:hover>a:before,
+      .navmenu .active:before {
+        visibility: visible;
+        width: 25px;
+      }
+
+      .navmenu li:hover>a,
+      .navmenu .active,
+      .navmenu .active:focus {
+        color: var(--nav-hover-color);
+      }
+
+      .navmenu .dropdown ul {
+        margin: 0;
+        padding: 10px 0;
+        background: var(--nav-dropdown-background-color);
+        display: block;
+        position: absolute;
+        visibility: hidden;
+        left: 14px;
+        top: 130%;
+        opacity: 0;
+        transition: 0.3s;
+        border-radius: 4px;
+        z-index: 99;
+        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .navmenu .dropdown ul li {
+        min-width: 200px;
+      }
+
+      .navmenu .dropdown ul a {
+        padding: 10px 20px;
+        font-size: 15px;
+        text-transform: none;
+        color: var(--nav-dropdown-color);
+      }
+
+      .navmenu .dropdown ul a i {
+        font-size: 12px;
+      }
+
+      .navmenu .dropdown ul a:hover,
+      .navmenu .dropdown ul .active:hover,
+      .navmenu .dropdown ul li:hover>a {
+        color: var(--nav-dropdown-hover-color);
+      }
+
+      .navmenu .dropdown:hover>ul {
+        opacity: 1;
+        top: 100%;
+        visibility: visible;
+      }
+
+      .navmenu .dropdown .dropdown ul {
+        top: 0;
+        left: -90%;
+        visibility: hidden;
+      }
+
+      .navmenu .dropdown .dropdown:hover>ul {
+        opacity: 1;
+        top: 0;
+        left: -100%;
+        visibility: visible;
+      }
+    }
+
+    /* Mobile Navigation */
+    @media (max-width: 1199px) {
+      .mobile-nav-toggle {
+        color: var(--nav-color);
+        font-size: 28px;
+        line-height: 0;
+        margin-right: 10px;
+        cursor: pointer;
+        transition: color 0.3s;
+      }
+
+      .navmenu {
+        padding: 0;
+        z-index: 9997;
+      }
+
+      .navmenu ul {
+        display: none;
+        list-style: none;
+        position: absolute;
+        inset: 60px 20px 20px 20px;
+        padding: 10px 0;
+        margin: 0;
+        border-radius: 6px;
+        background-color: var(--nav-mobile-background-color);
+        border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+        box-shadow: none;
+        overflow-y: auto;
+        transition: 0.3s;
+        z-index: 9998;
+      }
+
+      .navmenu a,
+      .navmenu a:focus {
+        color: var(--nav-dropdown-color);
+        padding: 10px 20px;
+        font-family: var(--nav-font);
+        font-size: 17px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        white-space: nowrap;
+        transition: 0.3s;
+      }
+
+      .navmenu a i,
+      .navmenu a:focus i {
+        font-size: 12px;
+        line-height: 0;
+        margin-left: 5px;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        transition: 0.3s;
+        background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+      }
+
+      .navmenu a i:hover,
+      .navmenu a:focus i:hover {
+        background-color: var(--accent-color);
+        color: var(--contrast-color);
+      }
+
+      .navmenu a:hover,
+      .navmenu .active,
+      .navmenu .active:focus {
+        color: var(--nav-dropdown-hover-color);
+      }
+
+      .navmenu .active i,
+      .navmenu .active:focus i {
+        background-color: var(--accent-color);
+        color: var(--contrast-color);
+        transform: rotate(180deg);
+      }
+
+      .navmenu .dropdown ul {
+        position: static;
+        display: none;
+        z-index: 99;
+        padding: 10px 0;
+        margin: 10px 20px;
+        background-color: var(--nav-dropdown-background-color);
+        transition: all 0.5s ease-in-out;
+      }
+
+      .navmenu .dropdown ul ul {
+        background-color: rgba(33, 37, 41, 0.1);
+      }
+
+      .navmenu .dropdown>.dropdown-active {
+        display: block;
+        background-color: rgba(33, 37, 41, 0.03);
+      }
+
+      .mobile-nav-active {
+        overflow: hidden;
+      }
+
+      .mobile-nav-active .mobile-nav-toggle {
+        color: #fff;
+        position: absolute;
+        font-size: 32px;
+        top: 15px;
+        right: 15px;
+        margin-right: 0;
+        z-index: 9999;
+      }
+
+      .mobile-nav-active .navmenu {
+        position: fixed;
+        overflow: hidden;
+        inset: 0;
+        background: rgba(33, 37, 41, 0.8);
+        transition: 0.3s;
+      }
+
+      .mobile-nav-active .navmenu>ul {
+        display: block;
+      }
+    }
+  </style>
+  <style id="footer-style">
+    .footer {
+      color: var(--default-color);
+      background-color: var(--background-color);
+      font-size: 14px;
+      text-align: center;
+      padding: 30px 0;
+      position: relative;
+    }
+
+    .footer h3 {
+      font-size: 36px;
+      font-weight: 700;
+      position: relative;
+      padding: 0;
+      margin: 0 0 15px 0;
+    }
+
+    .footer p {
+      font-size: 15;
+      font-style: italic;
+      padding: 0;
+      margin: 0 0 30px 0;
+    }
+
+    .footer .social-links {
+      margin: 0 0 30px 0;
+    }
+
+    .footer .social-links a {
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--accent-color);
+      color: var(--contrast-color);
+      line-height: 1;
+      margin: 0 4px;
+      border-radius: 50%;
+      text-align: center;
+      width: 36px;
+      height: 36px;
+      transition: 0.3s;
+    }
+
+    .footer .social-links a:hover {
+      background: color-mix(in srgb, var(--accent-color), transparent 20%);
+      text-decoration: none;
+    }
+
+    .footer .copyright {
+      padding-top: 25px;
+      border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+    }
+
+    .footer .credits {
+      font-size: 13px;
+      padding-top: 5px;
+    }
+  </style>
+  <style id="scrolltop-style">
+    .scroll-top {
+      position: fixed;
+      visibility: hidden;
+      opacity: 0;
+      right: 15px;
+      bottom: -15px;
+      z-index: 99999;
+      background-color: var(--accent-color);
+      width: 44px;
+      height: 44px;
+      border-radius: 50px;
+      transition: all 0.4s;
+    }
+
+    .scroll-top i {
+      font-size: 24px;
+      color: var(--contrast-color);
+      line-height: 0;
+    }
+
+    .scroll-top:hover {
+      background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+      color: var(--contrast-color);
+    }
+
+    .scroll-top.active {
+      visibility: visible;
+      opacity: 1;
+      bottom: 15px;
+    }
+  </style>
+  <style id="section-4HmQk6cDxH-style">
+    .hero {
+      width: 100%;
+      min-height: 100vh;
+      position: relative;
+      padding: 80px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero img {
+      position: absolute;
+      inset: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
+
+    .hero .container {
+      position: relative;
+      z-index: 3;
+    }
+
+    .hero h2 {
+      margin: 0;
+      font-size: 64px;
+      font-weight: 700;
+    }
+
+    .hero p {
+      margin: 5px 0 0 0;
+      font-size: 26px;
+    }
+
+    .hero p span {
+      letter-spacing: 1px;
+      border-bottom: 2px solid var(--accent-color);
+    }
+
+    .hero .social-links {
+      margin-top: 25px;
+    }
+
+    .hero .social-links a {
+      background-color: color-mix(in srgb, var(--default-color), transparent 90%);
+      color: var(--default-color);
+      font-size: 14px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+      transition: 0.3s;
+    }
+
+    .hero .social-links a:hover {
+      background-color: var(--accent-color);
+    }
+
+    @media (max-width: 768px) {
+      .hero h2 {
+        font-size: 32px;
+      }
+
+      .hero p {
+        font-size: 20px;
+      }
+    }
+  </style>
+  <style id="section-OTSOHZFB1T-style">
+    .about-me {
+      position: relative;
+    }
+
+    .about-me .profile-wrapper {
+      position: relative;
+    }
+
+    .about-me .profile-wrapper .profile-image-container {
+      position: relative;
+      max-width: 450px;
+      margin: 0 auto 30px;
+    }
+
+    .about-me .profile-wrapper .profile-image-container .profile-image {
+      border-radius: 20px;
+      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-me .profile-wrapper .profile-image-container .experience-badge {
+      position: absolute;
+      bottom: -20px;
+      right: 20px;
+      background: var(--accent-color);
+      color: var(--contrast-color);
+      padding: 20px 25px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 10px 30px color-mix(in srgb, var(--accent-color), transparent 50%);
+    }
+
+    .about-me .profile-wrapper .profile-image-container .experience-badge .years {
+      display: block;
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .about-me .profile-wrapper .profile-image-container .experience-badge .text {
+      display: block;
+      font-size: 12px;
+      margin-top: 5px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .about-me .profile-wrapper .quick-facts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .about-me .profile-wrapper .quick-facts .fact-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: color-mix(in srgb, var(--default-color), transparent 30%);
+      font-size: 14px;
+    }
+
+    .about-me .profile-wrapper .quick-facts .fact-item i {
+      color: var(--accent-color);
+      font-size: 18px;
+    }
+
+    .about-me .about-content {
+      padding-left: 40px;
+    }
+
+    @media (max-width: 992px) {
+      .about-me .about-content {
+        padding-left: 0;
+        margin-top: 50px;
+      }
+    }
+
+    .about-me .about-content .intro-text {
+      margin-bottom: 40px;
+    }
+
+    .about-me .about-content .intro-text h2 {
+      font-size: 32px;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    .about-me .about-content .intro-text h2 .highlight {
+      color: var(--accent-color);
+      position: relative;
+    }
+
+    .about-me .about-content .intro-text h2 .highlight::after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent-color), color-mix(in srgb, var(--accent-color), transparent 60%));
+      border-radius: 2px;
+    }
+
+    .about-me .about-content .intro-text h3 {
+      font-size: 18px;
+      color: color-mix(in srgb, var(--default-color), transparent 30%);
+      font-weight: 400;
+      margin-bottom: 25px;
+    }
+
+    .about-me .about-content .intro-text p {
+      line-height: 1.8;
+      color: color-mix(in srgb, var(--default-color), transparent 20%);
+      margin-bottom: 15px;
+    }
+
+    .about-me .about-content .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: 576px) {
+      .about-me .about-content .skills-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .about-me .about-content .skills-grid .skill-card {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding: 20px;
+      background: var(--surface-color);
+      border-radius: 12px;
+      border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+      transition: all 0.3s ease;
+    }
+
+    .about-me .about-content .skills-grid .skill-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      border-color: var(--accent-color);
+    }
+
+    .about-me .about-content .skills-grid .skill-card:hover .skill-icon {
+      background: var(--accent-color);
+      color: var(--contrast-color);
+    }
+
+    .about-me .about-content .skills-grid .skill-card .skill-icon {
+      width: 50px;
+      height: 50px;
+      background: color-mix(in srgb, var(--accent-color), transparent 90%);
+      color: var(--accent-color);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      flex-shrink: 0;
+      transition: all 0.3s ease;
+    }
+
+    .about-me .about-content .skills-grid .skill-card .skill-info h4 {
+      font-size: 16px;
+      margin-bottom: 5px;
+      font-weight: 600;
+    }
+
+    .about-me .about-content .skills-grid .skill-card .skill-info p {
+      font-size: 13px;
+      color: color-mix(in srgb, var(--default-color), transparent 40%);
+      margin: 0;
+      line-height: 1.4;
+    }
+
+    .about-me .about-content .motto-section {
+      position: relative;
+      padding: 25px 30px;
+      background: color-mix(in srgb, var(--accent-color), transparent 95%);
+      border-left: 4px solid var(--accent-color);
+      border-radius: 8px;
+      margin-bottom: 40px;
+    }
+
+    .about-me .about-content .motto-section i {
+      position: absolute;
+      top: 15px;
+      left: 20px;
+      font-size: 24px;
+      color: color-mix(in srgb, var(--accent-color), transparent 50%);
+    }
+
+    .about-me .about-content .motto-section p {
+      margin: 0;
+      padding-left: 25px;
+      font-style: italic;
+      font-size: 16px;
+      line-height: 1.6;
+      color: color-mix(in srgb, var(--default-color), transparent 20%);
+    }
+
+    .about-me .about-content .cta-buttons {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .about-me .about-content .cta-buttons .btn {
+      padding: 12px 30px;
+      border-radius: 50px;
+      font-size: 15px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .about-me .about-content .cta-buttons .btn.btn-primary {
+      background: var(--accent-color);
+      color: var(--contrast-color);
+      border: 2px solid var(--accent-color);
+    }
+
+    .about-me .about-content .cta-buttons .btn.btn-primary:hover {
+      background: color-mix(in srgb, var(--accent-color), transparent 20%);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px color-mix(in srgb, var(--accent-color), transparent 60%);
+    }
+
+    .about-me .about-content .cta-buttons .btn.btn-outline {
+      background: transparent;
+      color: var(--accent-color);
+      border: 2px solid var(--accent-color);
+    }
+
+    .about-me .about-content .cta-buttons .btn.btn-outline:hover {
+      background: var(--accent-color);
+      color: var(--contrast-color);
+      transform: translateY(-3px);
+    }
+  </style>
+  <style id="section-wPJRuLI5Gn-style">
+    .resume-2 .section-header {
+      margin-bottom: 2.5rem;
+    }
+
+    .resume-2 .section-header .header-content .section-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #6c5ce7 20%));
+      color: var(--contrast-color);
+      padding: 0.5rem 1.2rem;
+      border-radius: 25px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 1rem;
+    }
+
+    .resume-2 .section-header .header-content h2 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--heading-color);
+      margin-bottom: 1rem;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+
+    .resume-2 .section-header .header-content p {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: color-mix(in srgb, var(--default-color), transparent 35%);
+      margin: 0;
+    }
+
+    .resume-2 .experience-section .experience-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .resume-2 .experience-section .experience-cards .exp-card {
+      background: var(--surface-color);
+      border-radius: 16px;
+      padding: 2rem;
+      border: 2px solid color-mix(in srgb, var(--default-color), transparent 95%);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .resume-2 .experience-section .experience-cards .exp-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+    }
+
+    .resume-2 .experience-section .experience-cards .exp-card:hover {
+      transform: translateY(-5px);
+      border-color: color-mix(in srgb, var(--accent-color), transparent 80%);
+      box-shadow: 0 15px 45px color-mix(in srgb, var(--default-color), transparent 85%);
+    }
+
+    .resume-2 .experience-section .experience-cards .exp-card:hover::before {
+      transform: translateX(0);
+    }
+
+    .resume-2 .experience-section .experience-cards .exp-card.featured {
+      border-color: color-mix(in srgb, var(--accent-color), transparent 70%);
+      background: linear-gradient(135deg, var(--surface-color), color-mix(in srgb, var(--accent-color), transparent 95%));
+    }
+
+    .resume-2 .experience-section .experience-cards .exp-card.featured::before {
+      background: linear-gradient(90deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #6c5ce7 20%), var(--accent-color));
+    }
+
+    .resume-2 .experience-section .experience-cards .exp-card .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .resume-2 .experience-section .experience-cards .exp-card .card-header .company-logo {
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #6c5ce7 20%));
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .resume-2 .experience-section .experience-cards .exp-card .card-header .company-logo i {
+      font-size: 1.3rem;
+      color: var(--contrast-color);
+    }
+
+    .resume-2 .experience-section .experience-cards .exp-card .card-header .period-badge {
+      background: color-mix(in srgb, var(--accent-color), transparent 85%);
+      color: var(--accent-color);
+      padding: 0.4rem 1rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .resume-2 .experience-section .experience-cards .exp-card .card-body h3 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--heading-color);
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.01em;
+    }
+
+    .resume-2 .experience-section .experience-cards .exp-card .card-body .company-name {
+      font-size: 1rem;
+      color: color-mix(in srgb, var(--default-color), transparent 25%);
+      font-weight: 500;
+      margin-bottom: 0.3rem;
+    }
+
+    .resume-2 .experience-section .experience-cards .exp-card .card-body .duration {
+      display: inline-block;
+      font-size: 0.9rem;
+      color: var(--accent-color);
+      font-weight: 600;
+      background: color-mix(in srgb, var(--accent-color), transparent 90%);
+      padding: 0.2rem 0.8rem;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+    }
+
+    .resume-2 .experience-section .experience-cards .exp-card .card-body .description {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: color-mix(in srgb, var(--default-color), transparent 35%);
+      margin-bottom: 1.5rem;
+    }
+
+    .resume-2 .experience-section .experience-cards .exp-card .card-body .skills-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .resume-2 .experience-section .experience-cards .exp-card .card-body .skills-tags .skill-tag {
+      background: color-mix(in srgb, var(--accent-color), transparent 92%);
+      color: var(--accent-color);
+      padding: 0.3rem 0.8rem;
+      border-radius: 15px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      border: 1px solid color-mix(in srgb, var(--accent-color), transparent 85%);
+    }
+
+    .resume-2 .education-section .education-timeline .timeline-track {
+      position: relative;
+      padding-left: 2.5rem;
+    }
+
+    .resume-2 .education-section .education-timeline .timeline-track::before {
+      content: "";
+      position: absolute;
+      left: 10px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(180deg, var(--accent-color), color-mix(in srgb, var(--accent-color), transparent 50%));
+    }
+
+    .resume-2 .education-section .education-timeline .timeline-track .timeline-item {
+      position: relative;
+      margin-bottom: 3rem;
+    }
+
+    .resume-2 .education-section .education-timeline .timeline-track .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .resume-2 .education-section .education-timeline .timeline-track .timeline-item .timeline-marker {
+      position: absolute;
+      left: -3.5rem;
+      top: 0;
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #6c5ce7 20%));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 4px solid var(--background-color);
+      box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent-color), transparent 80%);
+    }
+
+    .resume-2 .education-section .education-timeline .timeline-track .timeline-item .timeline-marker i {
+      font-size: 1.2rem;
+      color: var(--contrast-color);
+    }
+
+    .resume-2 .education-section .education-timeline .timeline-track .timeline-item .timeline-content {
+      background: var(--surface-color);
+      padding: 1.8rem;
+      border-radius: 12px;
+      border: 1px solid color-mix(in srgb, var(--default-color), transparent 95%);
+      transition: all 0.3s ease;
+    }
+
+    .resume-2 .education-section .education-timeline .timeline-track .timeline-item .timeline-content:hover {
+      transform: translateX(5px);
+      border-color: color-mix(in srgb, var(--accent-color), transparent 80%);
+      box-shadow: 0 10px 30px color-mix(in srgb, var(--default-color), transparent 90%);
+    }
+
+    .resume-2 .education-section .education-timeline .timeline-track .timeline-item .timeline-content .education-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .resume-2 .education-section .education-timeline .timeline-track .timeline-item .timeline-content .education-meta .year-range {
+      font-size: 0.9rem;
+      color: var(--accent-color);
+      font-weight: 600;
+      background: color-mix(in srgb, var(--accent-color), transparent 90%);
+      padding: 0.3rem 0.8rem;
+      border-radius: 15px;
+    }
+
+    .resume-2 .education-section .education-timeline .timeline-track .timeline-item .timeline-content .education-meta .degree-level {
+      font-size: 0.8rem;
+      color: color-mix(in srgb, var(--default-color), transparent 40%);
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+    }
+
+    .resume-2 .education-section .education-timeline .timeline-track .timeline-item .timeline-content h4 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--heading-color);
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.01em;
+    }
+
+    .resume-2 .education-section .education-timeline .timeline-track .timeline-item .timeline-content .institution {
+      font-size: 1rem;
+      color: color-mix(in srgb, var(--default-color), transparent 25%);
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+
+    .resume-2 .education-section .education-timeline .timeline-track .timeline-item .timeline-content .description {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: color-mix(in srgb, var(--default-color), transparent 35%);
+      margin-bottom: 1.2rem;
+    }
+
+    .resume-2 .education-section .education-timeline .timeline-track .timeline-item .timeline-content .achievement {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: color-mix(in srgb, var(--accent-color), transparent 92%);
+      padding: 0.6rem 1rem;
+      border-radius: 8px;
+      border-left: 3px solid var(--accent-color);
+    }
+
+    .resume-2 .education-section .education-timeline .timeline-track .timeline-item .timeline-content .achievement i {
+      color: var(--accent-color);
+      font-size: 1rem;
+    }
+
+    .resume-2 .education-section .education-timeline .timeline-track .timeline-item .timeline-content .achievement span {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--accent-color);
+    }
+
+    .resume-2 .education-section .education-timeline .timeline-track .timeline-item .timeline-content .certifications-list .cert-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.8rem 0;
+      border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 95%);
+    }
+
+    .resume-2 .education-section .education-timeline .timeline-track .timeline-item .timeline-content .certifications-list .cert-item:last-child {
+      border-bottom: none;
+    }
+
+    .resume-2 .education-section .education-timeline .timeline-track .timeline-item .timeline-content .certifications-list .cert-item .cert-name {
+      font-size: 0.9rem;
+      color: var(--heading-color);
+      font-weight: 500;
+    }
+
+    .resume-2 .education-section .education-timeline .timeline-track .timeline-item .timeline-content .certifications-list .cert-item .cert-year {
+      font-size: 0.8rem;
+      color: var(--accent-color);
+      font-weight: 600;
+      background: color-mix(in srgb, var(--accent-color), transparent 90%);
+      padding: 0.2rem 0.6rem;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 992px) {
+      .resume-2 .section-header {
+        margin-bottom: 2rem;
+      }
+
+      .resume-2 .section-header .header-content h2 {
+        font-size: 2rem;
+      }
+
+      .resume-2 .experience-section {
+        margin-bottom: 3rem;
+      }
+
+      .resume-2 .education-timeline .timeline-track .timeline-item .timeline-marker {
+        width: 45px;
+        height: 45px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .resume-2 .section-header .header-content {
+        text-align: center;
+      }
+
+      .resume-2 .section-header .header-content h2 {
+        font-size: 1.8rem;
+      }
+
+      .resume-2 .experience-section .experience-cards .exp-card {
+        padding: 1.5rem;
+      }
+
+      .resume-2 .experience-section .experience-cards .exp-card .card-header .company-logo {
+        width: 45px;
+        height: 45px;
+      }
+
+      .resume-2 .experience-section .experience-cards .exp-card .card-header .company-logo i {
+        font-size: 1.2rem;
+      }
+
+      .resume-2 .education-section .education-timeline .timeline-track {
+        padding-left: 2rem;
+      }
+
+      .resume-2 .education-section .education-timeline .timeline-track::before {
+        left: 20px;
+      }
+
+      .resume-2 .education-section .education-timeline .timeline-track .timeline-item .timeline-marker {
+        left: -2.3rem;
+        width: 40px;
+        height: 40px;
+      }
+
+      .resume-2 .education-section .education-timeline .timeline-track .timeline-item .timeline-marker i {
+        font-size: 1rem;
+      }
+
+      .resume-2 .education-section .education-timeline .timeline-track .timeline-item .timeline-content {
+        padding: 1.5rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .resume-2 .section-header .header-content .section-badge {
+        font-size: 0.8rem;
+        padding: 0.4rem 1rem;
+      }
+
+      .resume-2 .section-header .header-content h2 {
+        font-size: 1.6rem;
+      }
+
+      .resume-2 .experience-section .experience-cards .exp-card {
+        padding: 1.2rem;
+      }
+
+      .resume-2 .experience-section .experience-cards .exp-card .card-header {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+      }
+
+      .resume-2 .education-section .education-timeline .timeline-track .timeline-item .timeline-content {
+        padding: 1.2rem;
+      }
+
+      .resume-2 .education-section .education-timeline .timeline-track .timeline-item .timeline-content .education-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: flex-start;
+      }
+
+      .resume-2 .education-section .education-timeline .timeline-track .timeline-item .timeline-content .certifications-list .cert-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.3rem;
+      }
+    }
+  </style>
+  </style>
+  <style id="section-i6h9FsjlsB-style">
+    .portfolio-2 .portfolio-filters {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 40px;
+      padding: 0;
+      list-style: none;
+    }
+
+    @media (max-width: 768px) {
+      .portfolio-2 .portfolio-filters {
+        gap: 6px;
+        margin-bottom: 30px;
+      }
+    }
+
+    .portfolio-2 .portfolio-filters li {
+      padding: 12px 24px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      background-color: var(--surface-color);
+      color: var(--default-color);
+      border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    @media (max-width: 768px) {
+      .portfolio-2 .portfolio-filters li {
+        padding: 10px 18px;
+        font-size: 0.8rem;
+      }
+    }
+
+    .portfolio-2 .portfolio-filters li::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+      transition: left 0.5s;
+    }
+
+    .portfolio-2 .portfolio-filters li:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px color-mix(in srgb, var(--accent-color), transparent 85%);
+      border-color: var(--accent-color);
+    }
+
+    .portfolio-2 .portfolio-filters li:hover::before {
+      left: 100%;
+    }
+
+    .portfolio-2 .portfolio-filters li.filter-active {
+      background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #4338ca 20%));
+      color: var(--contrast-color);
+      border-color: var(--accent-color);
+      box-shadow: 0 8px 30px color-mix(in srgb, var(--accent-color), transparent 70%);
+    }
+
+    .portfolio-2 .portfolio-wrapper {
+      background-color: var(--surface-color);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px color-mix(in srgb, var(--default-color), transparent 92%);
+      margin-bottom: 30px;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 1px solid color-mix(in srgb, var(--default-color), transparent 92%);
+    }
+
+    .portfolio-2 .portfolio-wrapper:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px color-mix(in srgb, var(--default-color), transparent 85%);
+      border-color: color-mix(in srgb, var(--accent-color), transparent 80%);
+    }
+
+    .portfolio-2 .portfolio-wrapper:hover .portfolio-image img {
+      transform: scale(1.05);
+    }
+
+    .portfolio-2 .portfolio-wrapper:hover .portfolio-image .portfolio-hover {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .portfolio-2 .portfolio-wrapper .portfolio-image {
+      position: relative;
+      overflow: hidden;
+      height: 240px;
+    }
+
+    .portfolio-2 .portfolio-wrapper .portfolio-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .portfolio-2 .portfolio-wrapper .portfolio-image .portfolio-hover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(54, 144, 231, 0.9), rgba(67, 56, 202, 0.9));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      backdrop-filter: blur(2px);
+    }
+
+    .portfolio-2 .portfolio-wrapper .portfolio-image .portfolio-hover .portfolio-actions {
+      display: flex;
+      gap: 15px;
+    }
+
+    .portfolio-2 .portfolio-wrapper .portfolio-image .portfolio-hover .portfolio-actions .action-btn {
+      width: 50px;
+      height: 50px;
+      background-color: var(--surface-color);
+      color: var(--accent-color);
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .portfolio-2 .portfolio-wrapper .portfolio-image .portfolio-hover .portfolio-actions .action-btn:hover {
+      background-color: var(--accent-color);
+      color: var(--contrast-color);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .portfolio-2 .portfolio-wrapper .portfolio-content {
+      padding: 25px;
+    }
+
+    .portfolio-2 .portfolio-wrapper .portfolio-content .portfolio-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .portfolio-2 .portfolio-wrapper .portfolio-content .portfolio-meta .project-type {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--accent-color);
+      background: linear-gradient(135deg, color-mix(in srgb, var(--accent-color), transparent 90%), color-mix(in srgb, var(--accent-color), transparent 85%));
+      padding: 6px 12px;
+      border-radius: 20px;
+    }
+
+    .portfolio-2 .portfolio-wrapper .portfolio-content .portfolio-meta .project-rating {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: #fbbf24;
+    }
+
+    .portfolio-2 .portfolio-wrapper .portfolio-content .portfolio-meta .project-rating i {
+      font-size: 0.8rem;
+    }
+
+    .portfolio-2 .portfolio-wrapper .portfolio-content h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: var(--heading-color);
+      line-height: 1.3;
+    }
+
+    .portfolio-2 .portfolio-wrapper .portfolio-content p {
+      font-size: 0.875rem;
+      color: color-mix(in srgb, var(--default-color), transparent 30%);
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+
+    .portfolio-2 .portfolio-wrapper .portfolio-content .portfolio-tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .portfolio-2 .portfolio-wrapper .portfolio-content .portfolio-tech .tech-badge {
+      font-size: 0.75rem;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 12px;
+      background-color: color-mix(in srgb, var(--default-color), transparent 95%);
+      color: color-mix(in srgb, var(--default-color), transparent 20%);
+      border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+      transition: all 0.3s ease;
+    }
+
+    .portfolio-2 .portfolio-wrapper .portfolio-content .portfolio-tech .tech-badge:hover {
+      background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+      color: var(--accent-color);
+      border-color: color-mix(in srgb, var(--accent-color), transparent 80%);
+    }
+
+    .portfolio-2 .portfolio-cta {
+      margin-top: 60px;
+      padding: 40px 30px;
+      background: linear-gradient(135deg, var(--surface-color), color-mix(in srgb, var(--surface-color), var(--accent-color) 5%));
+      border-radius: 20px;
+      border: 1px solid color-mix(in srgb, var(--accent-color), transparent 90%);
+    }
+
+    .portfolio-2 .portfolio-cta h4 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: var(--heading-color);
+    }
+
+    .portfolio-2 .portfolio-cta p {
+      font-size: 1rem;
+      color: color-mix(in srgb, var(--default-color), transparent 30%);
+      margin-bottom: 30px;
+    }
+
+    .portfolio-2 .portfolio-cta .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .portfolio-2 .portfolio-cta .cta-buttons .btn {
+      padding: 14px 28px;
+      font-weight: 600;
+      border-radius: 12px;
+      font-size: 0.925rem;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      text-decoration: none;
+    }
+
+    .portfolio-2 .portfolio-cta .cta-buttons .btn.btn-primary {
+      background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #4338ca 20%));
+      color: var(--contrast-color);
+      border: none;
+      box-shadow: 0 4px 15px color-mix(in srgb, var(--accent-color), transparent 70%);
+    }
+
+    .portfolio-2 .portfolio-cta .cta-buttons .btn.btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px color-mix(in srgb, var(--accent-color), transparent 60%);
+    }
+
+    .portfolio-2 .portfolio-cta .cta-buttons .btn.btn-outline {
+      background-color: transparent;
+      color: var(--accent-color);
+      border: 2px solid var(--accent-color);
+    }
+
+    .portfolio-2 .portfolio-cta .cta-buttons .btn.btn-outline:hover {
+      background-color: var(--accent-color);
+      color: var(--contrast-color);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px color-mix(in srgb, var(--accent-color), transparent 70%);
+    }
+  </style>
+  </style>
+  <style id="section-hs5nblemCm-style">
+    .contact-2 .info-card {
+      background-color: var(--surface-color);
+      padding: 30px;
+      text-align: center;
+      height: 100%;
+      border-radius: 10px;
+      border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .contact-2 .info-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .contact-2 .info-card .icon-box {
+      width: 56px;
+      height: 56px;
+      margin: 0 auto 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background-color: color-mix(in srgb, var(--accent-color), transparent 92%);
+    }
+
+    .contact-2 .info-card .icon-box i {
+      font-size: 24px;
+      color: var(--accent-color);
+    }
+
+    .contact-2 .info-card h3 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .contact-2 .info-card p {
+      margin: 0;
+      color: color-mix(in srgb, var(--default-color), transparent 20%);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .contact-2 .form-wrapper .input-group .input-group-text {
+      color: var(--accent-color);
+      background-color: color-mix(in srgb, var(--default-color), transparent 96%);
+      border-color: color-mix(in srgb, var(--default-color), transparent 85%);
+      border-radius: 8px 0 0 8px;
+      padding: 12px 15px;
+    }
+
+    .contact-2 .form-wrapper .input-group .form-control {
+      color: var(--default-color);
+      background-color: var(--surface-color);
+      border-radius: 0 8px 8px 0;
+      box-shadow: none;
+      font-size: 14px;
+      border-color: color-mix(in srgb, var(--default-color), transparent 85%);
+      padding: 12px 15px;
+    }
+
+    .contact-2 .form-wrapper .input-group .form-control:focus {
+      border-color: var(--accent-color);
+    }
+
+    .contact-2 .form-wrapper .input-group .form-control::placeholder {
+      color: color-mix(in srgb, var(--default-color), transparent 70%);
+    }
+
+    .contact-2 .form-wrapper select.form-control {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+      background-repeat: no-repeat;
+      background-position: right 0.75rem center;
+      background-size: 16px 12px;
+      padding-right: 40px;
+    }
+
+    .contact-2 .form-wrapper textarea.form-control {
+      min-height: 160px;
+    }
+
+    .contact-2 .form-wrapper button {
+      background-color: var(--accent-color);
+      border: 0;
+      padding: 12px 40px;
+      color: var(--contrast-color);
+      border-radius: 8px;
+      transition: 0.3s;
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    .contact-2 .form-wrapper button:hover {
+      background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+    }
+  </style>
+  <style id="section-dPiLEz5S1L-style">
+    .about-me .profile-image {
+      position: relative;
+    }
+
+    .about-me .profile-image img {
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .about-me .profile-image img:hover {
+      transform: translateY(-5px);
+    }
+
+    .about-me .about-content h2 {
+      font-weight: 700;
+      font-size: 2.2rem;
+      color: var(--heading-color);
+      position: relative;
+    }
+
+    .about-me .about-content h2::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -12px;
+      width: 50px;
+      height: 3px;
+      background-color: var(--accent-color);
+    }
+
+    .about-me .about-content .lead {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: color-mix(in srgb, var(--default-color), transparent 15%);
+    }
+
+    .about-me .about-content .skills-row {
+      margin-top: 1.5rem;
+    }
+
+    .about-me .about-content .skills-row .skills-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: var(--heading-color);
+    }
+
+    .about-me .about-content .skills-row .skills-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .about-me .about-content .skills-row .skills-list li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.75rem;
+      font-size: 1rem;
+    }
+
+    .about-me .about-content .skills-row .skills-list li i {
+      color: var(--accent-color);
+      font-size: 1.1rem;
+      margin-right: 0.75rem;
+    }
+
+    .about-me .about-content .social-resume-wrapper {
+      margin-top: 2rem;
+    }
+
+    .about-me .about-content .social-resume-wrapper .download-resume-btn {
+      background-color: var(--accent-color);
+      color: var(--contrast-color);
+      padding: 0.75rem 1.5rem;
+      border-radius: 50px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .about-me .about-content .social-resume-wrapper .download-resume-btn:hover {
+      background-color: color-mix(in srgb, var(--accent-color), transparent 15%);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-me .about-content .social-resume-wrapper .download-resume-btn i {
+      font-size: 1.1rem;
+    }
+
+    .about-me .about-content .social-resume-wrapper .social-links .social-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: color-mix(in srgb, var(--accent-color), transparent 85%);
+      color: var(--accent-color);
+      transition: all 0.3s ease;
+    }
+
+    .about-me .about-content .social-resume-wrapper .social-links .social-link:hover {
+      background-color: var(--accent-color);
+      color: var(--contrast-color);
+      transform: translateY(-3px);
+    }
+
+    .about-me .about-content .social-resume-wrapper .social-links .social-link i {
+      font-size: 1.1rem;
+    }
+
+    @media (max-width: 992px) {
+      .about-me .profile-image {
+        margin-bottom: 2rem;
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .about-me .about-content {
+        text-align: center;
+      }
+
+      .about-me .about-content h2::after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .about-me .social-resume-wrapper {
+        justify-content: center;
+      }
+
+      .about-me .social-resume-wrapper .download-resume-btn {
+        margin-bottom: 1rem;
+      }
+
+      .about-me .skills-row {
+        text-align: left;
+      }
+    }
+  </style>
+  <link href="bootstrap-icons.css" rel="stylesheet">
+  <!-- Main JS -->
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <script src="assets/js/main.js"></script>
+
+
+  <body class="index-page">
+
+    <header id="header" class="header d-flex align-items-center fixed-top">
+      <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+        <a href="index.html" class="logo d-flex align-items-center">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <!-- <img src="assets/img/logo.webp" alt=""> -->
+          <h1 class="sitename">Portfolio</h1>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="#hero" class="active scrollto">Accueil</a></li>
+            <li><a href="#about-me" class="scrollto">À propos</a></li>
+            <li><a href="#resume-2" class="scrollto">CV</a></li>
+            <!--<li><a href="#services" class="scrollto">Services</a></li>-->
+            <li><a href="#portfolio-2" class="scrollto">Portfolio</a></li>
+            <li><a href="#contact-2" class="scrollto">Contact</a></li>
+            <li class="language-selector">
+              <button class="lang-button" onclick="toggleLanguageMenu(event)">
+                <span>🇫🇷 FR</span>
+                <i class="bi bi-chevron-down"></i>
+              </button>
+              <div class="lang-dropdown">
+                <a href="#" class="lang-option active">
+                  <span class="lang-flag">🇫🇷</span>
+                  <span>Français</span>
+                </a>
+                <a href="index-en.html" class="lang-option">
+                  <span class="lang-flag">🇬🇧</span>
+                  <span>English</span>
+                </a>
+              </div>
+            </li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+      </div>
+    </header>
+
+    <main class="main">
+
+      <!-- Hero Section -->
+      <section id="hero" class="hero section dark-background">
+
+        <img src="assets/video/hero.gif" alt="" data-aos="fade-in">
+
+        <div class="container" data-aos="zoom-out" data-aos-delay="100">
+          <h2>Mohamed-Hichem Bensabeur</h2>
+          <p>Je suis <span class="typed" data-typed-items="Designer, Développeur, Communicant, Graphiste"></span><span
+              class="typed-cursor typed-cursor--blink"></span></p>
+          <div class="social-links">
+            <a href="https://github.com/Hichem-Br"><i class="bi bi-github"></i></a>
+            <a href="https://www.linkedin.com/in/hichem-bensabeur/"><i class="bi bi-linkedin"></i></a>
+            <a href="mailto:hichem.bensabeur@example.com"><i class="bi bi-envelope"></i></a>
+          </div>
+        </div>
+
+      </section><!-- /Hero Section -->
+
+      <!-- About Section -->
+      <section id="about-me" class="about-me section" data-builder="section">
+
+        <div class="container section-title aos-init aos-animate" data-aos="fade-up" data-builder="section-title">
+          <h2 contenteditable="false" spellcheck="false" class="">à propos</h2>
+          <div><span contenteditable="false" spellcheck="false" class="">à propos</span> </div>
+        </div>
+        <slot type="section-title"></slot>
+
+        <div class="container aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="row gy-5 align-items-center">
+            <div class="col-lg-4 text-center text-lg-start aos-init aos-animate" data-aos="fade-right"
+              data-aos-delay="200">
+              <div class="profile-image">
+                <img src="assets/img/person/Designer-amico.svg" class="img-fluid rounded-4" alt="Profile Image"
+                  loading="lazy">
+              </div>
+            </div>
+
+            <div class="col-lg-8 aos-init aos-animate" data-aos="fade-left" data-aos-delay="300">
+              <div class="about-content">
+                <h2 class="mb-4" contenteditable="false" spellcheck="false">Bonjour, je suis Mohamed-Hichem Bensabeur
+                </h2>
+
+                <p class="lead mb-4" contenteditable="false" spellcheck="false">
+                  Étudiant en BUT MMI, je suis actuellement à la recherche d'une entreprise pouvant m'accueillir à
+                  compter de septembre 2025 pour une fréquence de 2 semaines en formation et 2 semaines en entreprise,
+                  qui me permettrait d'obtenir de nouvelles compétences et expériences professionnelles.
+                </p>
+
+                <div class="row skills-row mb-4">
+                  <div class="col-md-6 mb-3 mb-md-0">
+                    <h3 class="skills-title" contenteditable="false" spellcheck="false">Mes Compétences</h3>
+                    <ul class="skills-list">
+                      <li contenteditable="false" spellcheck="false" class=""><i
+                          class="bi bi-check2-circle"></i>Graphisme, identité de marque</li>
+                      <li contenteditable="false" spellcheck="false" class=""><i class="bi bi-check2-circle"></i>UI/UX
+                        Design<br></li>
+                      <li contenteditable="false" spellcheck="false" class=""><i
+                          class="bi bi-check2-circle"></i>Développement Front/Back</li>
+                      <li contenteditable="false" spellcheck="false" class=""><i
+                          class="bi bi-check2-circle"></i>Développement Web</li>
+                    </ul>
+                  </div>
+
+                  <div class="col-md-6">
+                    <h3 class="skills-title" contenteditable="false" spellcheck="false">Centre d'intérêts</h3>
+                    <ul class="skills-list">
+                      <li contenteditable="false" spellcheck="false" class=""><i class="bi bi-heart"></i>Art digital
+                        (Site intéractif, designs artistiques, ARG)</li>
+                      <li contenteditable="false" spellcheck="false" class=""><i class="bi bi-heart"></i>Création
+                        musicale (FL Studio)</li>
+                      <li contenteditable="false" spellcheck="false" class=""><i class="bi bi-heart"></i> E-Sport</li>
+                      <li contenteditable="false" spellcheck="false" class=""><i class="bi bi-heart"></i>Mangas</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+      <!-- /About Section -->
+
+      <!-- Resume Section-->
+      <section id="resume-2" class="resume-2 section" data-builder="section">
+
+        <slot type="section-title"></slot>
+
+        <div class="container aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="row gy-5">
+            <div class="col-lg-6">
+              <div class="experience-section">
+                <div class="section-header aos-init aos-animate" data-aos="fade-right" data-aos-delay="200">
+                  <div class="header-content">
+                    <span class="section-badge" contenteditable="false" spellcheck="false">Experience
+                      PROFESSIONELLE</span>
+                  </div>
+                </div>
+
+                <div class="experience-cards">
+                  <div class="exp-card aos-init aos-animate" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="card-header">
+                      <div class="company-logo">
+                        <i class="bi bi-laptop"></i>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <h3 contenteditable="false" spellcheck="false">Développeur Web&nbsp;· Stage</h3>
+                      <p class="company-name" contenteditable="false" spellcheck="false">ASSOCIATION ESPORT LE MONT
+                        ROYAL · Montereau-Fault-Yonne (77)</p>
+                      <span class="duration">avril 2025 - juin 2025</span>
+                      <p class="description" contenteditable="false" spellcheck="false">• Développement d'un site web
+                        avec WordPress.<br>• Création d'éléments graphiques (Photoshop, Illustrator).</p>
+                      <div class="skills-tags">
+                        <span class="skill-tag">WordPress</span>
+                        <span class="skill-tag">HTML/CSS/JAVASCRIPT</span>
+                        <span class="skill-tag" contenteditable="false" spellcheck="false">Graphisme</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="exp-card aos-init aos-animate" data-aos="zoom-in" data-aos-delay="350">
+                    <div class="card-header">
+                      <div class="company-logo">
+                        <i class="bi bi-buildings"></i>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <h3 contenteditable="false" spellcheck="false">Employé Commerciale&nbsp;· CDD</h3>
+                      <p class="company-name" contenteditable="false" spellcheck="false">E.Leclerc · Varennes-sur-Seine
+                        (77)</p>
+                      <span class="duration">juin 2022 - juin 2022</span>
+                      <p class="description" contenteditable="false" spellcheck="false">• Mise en rayon des produits
+                        alimentaires.
+                        <br>• Rangements des réserves de stockage.
+                        <br>• Guider les clients dans leurs recherches.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="exp-card aos-init aos-animate" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="card-header">
+                      <div class="company-logo">
+                        <i class="bi bi-palette"></i>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <h3>Stage D'observation</h3>
+                      <p class="company-name" contenteditable="false" spellcheck="false">Prysmian Group ·
+                        Montereau-Fault-Yonne (77)</p>
+                      <span class="duration">2019 - 2019</span>
+                      <p class="description" contenteditable="false" spellcheck="false">• Observation et analyse au sein
+                        d'une équipe logistique.<br>• Observation des machines et de la fabrication de câbles fibre
+                        optiques.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="education-section">
+                <div class="section-header featured aos-init aos-animate" data-aos="fade-left" data-aos-delay="200">
+                  <div class="header-content">
+                    <span class="section-badge">formations</span>
+                  </div>
+                </div>
+
+                <div class="education-timeline aos-init aos-animate" data-aos="fade-left" data-aos-delay="300">
+                  <div class="timeline-track">
+                    <div class="timeline-item">
+                      <div class="timeline-marker">
+                        <i class="bi bi-mortarboard-fill"></i>
+                      </div>
+                      <div class="timeline-content">
+                        <div class="education-meta">
+                          <span class="year-range">2023 - Actuellement</span>
+                          <span class="degree-level">BUT</span>
+                        </div>
+                        <h4>BUT MMI (Métiers du Multimédia &amp; de l'Internet)</h4>
+                        <p class="institution">IUT de Troyes</p>
+                        <p class="description" contenteditable="false" spellcheck="false">Actuellement en 3ième année -
+                          Cours suivis :<br>• Design graphique, Audiovisuel. (Photoshop, Illustrator, Figma)<br>•
+                          Développement web. (HTML5, CSS/SCSS, PHP, JAVASCRIPT, SQL)<br>• Communication.</p>
+                        <div class="achievement">
+                          <i class="bi bi-award"></i>
+                          <span contenteditable="false" spellcheck="false">Diplome Obtenue en 2ièmme Année : DUT
+                            MMI</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="timeline-item">
+                      <div class="timeline-marker">
+                        <i class="bi bi-book"></i>
+                      </div>
+                      <div class="timeline-content">
+                        <div class="education-meta">
+                          <span class="year-range" contenteditable="false" spellcheck="false">2022 - 2023</span>
+                          <span class="degree-level">BUT</span>
+                        </div>
+                        <h4 contenteditable="false" spellcheck="false">BUT INFORMATIQUE</h4>
+                        <p class="institution" contenteditable="false" spellcheck="false">Université Paris-Est Créteil
+                          (UPEC)</p>
+                        <p class="description" contenteditable="false" spellcheck="false">1ère année - Cours
+                          suivis:<br>• Développement Back/Front. (HTML, CSS, PHP, C, JAVA)
+                          <br>• Systèmes et Réseaux
+                          • Base de données. (SQL)
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="timeline-item">
+                      <div class="timeline-marker">
+                        <i class="bi bi-patch-check-fill"></i>
+                      </div>
+                      <div class="timeline-content">
+                        <div class="education-meta">
+                          <span class="year-range">2022 - 2025</span>
+                          <span class="degree-level">Diplomes</span>
+                        </div>
+                        <h4 contenteditable="false" spellcheck="false">Diplomes</h4>
+                        <div class="certifications-list">
+                          <div class="cert-item">
+                            <span class="cert-name">DUT MMI</span>
+                            <span class="cert-year">2025</span>
+                          </div>
+                          <div class="cert-item">
+                            <span class="cert-name">Bac STI2D-EE&nbsp;· Mention Assez Bien</span>
+                            <span class="cert-year">2022</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+      <!--/Resume Section-->
+
+      <!--Portfolio Section-->
+      <section id="portfolio-2" class="portfolio-2 section" data-builder="section">
+
+        <div class="container section-title aos-init aos-animate" data-aos="fade-up" data-builder="section-title">
+          <h2 contenteditable="false" spellcheck="false">Portfolio</h2>
+          <div><span contenteditable="false" spellcheck="false" class="">MON</span> <span class="description-title"
+              contenteditable="false" spellcheck="false">Portfolio</span></div>
+        </div>
+        <slot type="section-title"></slot>
+
+        <div class="container aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+            <ul class="portfolio-filters isotope-filters aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+              <li data-filter="*" class="filter-active" contenteditable="false" spellcheck="false">All Projects</li>
+              <li data-filter=".filter-web" contenteditable="false" spellcheck="false">Web Design</li>
+              <li data-filter=".filter-mobile">Graphisme</li>
+              <li data-filter=".filter-branding">Développement</li>
+              <!--<li data-filter=".filter-ui" contenteditable="false" spellcheck="false">UI/UX</li>-->
+            </ul><!-- End Portfolio Filters -->
+
+            <div class="row gy-4 isotope-container aos-init aos-animate" data-aos="fade-up" data-aos-delay="300"
+              style="position: relative; height: 1063px;">
+              <div class="col-xl-4 col-lg-6 portfolio-item isotope-item filter-mobile"
+                style="position: absolute; left: 0px; top: 0px;">
+                <div class="portfolio-wrapper">
+                  <div class="portfolio-image">
+                    <img src="assets/img/portfolio/portfolio-7.webp" alt="Creative Web Project" class="img-fluid"
+                      loading="lazy">
+                    <div class="portfolio-hover">
+                      <div class="portfolio-actions">
+                        <a href="assets/img/portfolio/portfolio-7.webp" class="glightbox action-btn preview-btn"
+                          title="" data-gallery="portfolio-gallery-app">
+                          <i class="bi bi-eye"></i></a>
+                        </a>
+                        <a href="assets/img/charte_D_Bensabeur_Mohamed-Hichem.pdf" class="action-btn details-btn"
+                          title="View Details">
+                          <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="portfolio-content">
+                    <div class="portfolio-meta">
+                      <span class="project-type" contenteditable="false" spellcheck="false">Graphisme</span>
+                      <div class="project-rating">
+                      </div>
+                    </div>
+                    <h3 contenteditable="false" spellcheck="false">Charte Graphique fictive</h3>
+                    <p contenteditable="false" spellcheck="false">Lors de ma formation BUT MMI j'ai réaliser une charte
+                      graphique qui comprends des mockups, des logos,
+                      des choix typographiques et une palette de couleurs.</p>
+                    <div class="portfolio-tech">
+                      <span class="tech-badge">Illustrator</span>
+                      <span class="tech-badge" contenteditable="false" spellcheck="false">Photoshop</span>
+                      <span class="tech-badge" contenteditable="false" spellcheck="false">Canva</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xl-4 col-lg-6 portfolio-item isotope-item   filter-mobile filter-web"
+                style="position: absolute; left: 380px; top: 0px;">
+                <div class="portfolio-wrapper">
+                  <div class="portfolio-image">
+                    <img src="assets/img/portfolio/portfolio-8.webp" alt="Mobile App Project" class="img-fluid"
+                      loading="lazy">
+                    <div class="portfolio-hover">
+                      <div class="portfolio-actions">
+                        <a href="assets/img/portfolio/portfolio-8.webp" class="glightbox action-btn preview-btn"
+                          title="">
+                          <i class="bi bi-eye"></i>
+                        </a>
+                        <a href="https://mmi23a12.sae202.ovh/agence/" class="action-btn details-btn"
+                          title="View Details">
+                          <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="portfolio-content">
+                    <div class="portfolio-meta">
+                      <span class="project-type" contenteditable="false" spellcheck="false">Graphisme/Web Design</span>
+                      <div class="project-rating">
+
+                      </div>
+                    </div>
+                    <h3 contenteditable="false" spellcheck="false">Brand Design, Web Design</h3>
+                    <p contenteditable="false" spellcheck="false">Dans le cadre de ma formation BUT MMI, j'ai réaliser
+                      l'identité de deux marques fictives
+                      et leurs webs designs pour un projet scolaire.
+                    </p>
+                    <div class="portfolio-tech">
+                      <span class="tech-badge">Illustrator</span>
+                      <span class="tech-badge">Photoshop</span>
+                      <span class="tech-badge" contenteditable="false" spellcheck="false">Figma</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xl-4 col-lg-6 portfolio-item isotope-item filter-branding filter-mobile filter-web"
+                style="position: absolute; left: 760px; top: 0px;">
+                <div class="portfolio-wrapper">
+                  <div class="portfolio-image">
+                    <img src="assets/img/portfolio/portfolio-9.webp" alt="Branding Project" class="img-fluid"
+                      loading="lazy">
+                    <div class="portfolio-hover">
+                      <div class="portfolio-actions">
+                        <a href="assets/img/portfolio/portfolio-9.webp" class="glightbox action-btn preview-btn"
+                          title="">
+                          <i class="bi bi-eye"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="portfolio-content">
+                    <div class="portfolio-meta">
+                      <span class="project-type">Web Design/Graphisme</span>
+                      <div class="project-rating">
+                      </div>
+                    </div>
+                    <h3>Site Le Mont Royal</h3>
+                    <p>J'ai réaliser un site web pour l'association E-sport "Le Mont Royal" a l'aide de WordPress. J'ai
+                      aussi proposer quelques
+                      éléments graphiques.
+                    </p>
+                    <div class="portfolio-tech">
+                      <span class="tech-badge">WordPress</span>
+                      <span class="tech-badge">Illustrator</span>
+                      <span class="tech-badge">Photoshop</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--
+        <div class="col-xl-4 col-lg-6 portfolio-item isotope-item filter-ui" style="position: absolute; left: 380px; top: 521px;">
+          <div class="portfolio-wrapper">
+            <div class="portfolio-image">
+              <img src="" alt="UI/UX Project" class="img-fluid" loading="lazy">
+              <div class="portfolio-hover">
+                <div class="portfolio-actions">
+                  <a href="" class="glightbox action-btn preview-btn" title="Preview Project">
+                    <i class="bi bi-eye"></i>
+                  </a>
+                  <a href="#" class="action-btn details-btn" title="View Details">
+                    <i class="bi bi-arrow-up-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-content">
+              <div class="portfolio-meta">
+                <span class="project-type" contenteditable="false" spellcheck="false">UI/UX</span>
+                <div class="project-rating">
+                  <i class="bi bi-star-fill"></i>
+                  <span>4.7</span>
+                </div>
+              </div>
+              <h3 contenteditable="false" spellcheck="false">SaaS Dashboard Design</h3>
+              <p contenteditable="false" spellcheck="false">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+              <div class="portfolio-tech">
+                <span class="tech-badge">Figma</span>
+                <span class="tech-badge">Prototyping</span>
+                <span class="tech-badge" contenteditable="false" spellcheck="false">UX</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-4 col-lg-6 portfolio-item isotope-item filter-web" style="position: absolute; left: 760px; top: 521px;">
+          <div class="portfolio-wrapper">
+            <div class="portfolio-image">
+              <img src="" alt="E-commerce Platform" class="img-fluid" loading="lazy">
+              <div class="portfolio-hover">
+                <div class="portfolio-actions">
+                  <a href="" class="glightbox action-btn preview-btn" title="Preview Project">
+                    <i class="bi bi-eye"></i>
+                  </a>
+                  <a href="#" class="action-btn details-btn" title="View Details">
+                    <i class="bi bi-arrow-up-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-content">
+              <div class="portfolio-meta">
+                <span class="project-type">E-commerce</span>
+                <div class="project-rating">
+                  <i class="bi bi-star-fill"></i>
+                  <span>4.6</span>
+                </div>
+              </div>
+              <h3>E-commerce Platform</h3>
+              <p contenteditable="false" spellcheck="false">Donec rutrum congue leo eget malesuada. Vivamus magna justo, lacinia eget consectetur sed.</p>
+              <div class="portfolio-tech">
+                <span class="tech-badge" contenteditable="false" spellcheck="false">Shopify</span>
+                <span class="tech-badge">React</span>
+                <span class="tech-badge">API</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-4 col-lg-6 portfolio-item isotope-item filter-mobile" style="position: absolute; left: 0px; top: 542px;">
+          <div class="portfolio-wrapper">
+            <div class="portfolio-image">
+              <img src="" alt="Fintech Mobile App" class="img-fluid" loading="lazy">
+              <div class="portfolio-hover">
+                <div class="portfolio-actions">
+                  <a href="" class="glightbox action-btn preview-btn" title="Preview Project">
+                    <i class="bi bi-eye"></i>
+                  </a>
+                  <a href="#" class="action-btn details-btn" title="View Details">
+                    <i class="bi bi-arrow-up-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-content">
+              <div class="portfolio-meta">
+                <span class="project-type">Fintech</span>
+                <div class="project-rating">
+                  <i class="bi bi-star-fill"></i>
+                  <span>4.8</span>
+                </div>
+              </div>
+              <h3>Fintech Mobile Solution</h3>
+              <p>Cras ultricies ligula sed magna dictum porta. Proin eget tortor risus. Sed porttitor lectus nibh.</p>
+              <div class="portfolio-tech">
+                <span class="tech-badge">Swift</span>
+                <span class="tech-badge">Kotlin</span>
+                <span class="tech-badge">Blockchain</span>
+              </div>
+            </div>
+          </div>
+        </div>-->
+            </div><!-- End Portfolio Items Container -->
+
+          </div>
+
+
+        </div>
+
+      </section>
+      <!--/Portfolio Section-->
+
+      <!--Contact Section-->
+      <section id="contact-2" class="contact-2 section" data-builder="section">
+
+        <div class="container section-title aos-init aos-animate" data-aos="fade-up" data-builder="section-title">
+          <h2 contenteditable="false" spellcheck="false" class="">Contact</h2>
+          <div><span>me</span> <span class="description-title" contenteditable="false"
+              spellcheck="false">Contacter</span></div>
+        </div>
+        <slot type="section-title"></slot>
+
+        <div class="container aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="row gy-4 mb-5">
+            <div class="col-lg-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+              <div class="info-card">
+                <div class="icon-box">
+                  <i class="bi bi-geo-alt"></i>
+                </div>
+                <h3 contenteditable="false" spellcheck="false">localisation</h3>
+                <p contenteditable="false" spellcheck="false">Montereau-Fault-Yonne (77130)<br>Troyes (10000)</p>
+              </div>
+            </div>
+
+            <div class="col-lg-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+              <div class="info-card">
+                <div class="icon-box">
+                  <i class="bi bi-telephone"></i>
+                </div>
+                <h3>Contact</h3>
+                <p contenteditable="false" spellcheck="false">Mobile: +33 7 93 11 85 97<br>
+                  Email: Hichem.bnbr@gmail.com</p>
+              </div>
+            </div>
+
+            <div class="col-lg-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
+              <div class="info-card">
+                <div class="icon-box">
+                  <i class="bi bi-clock"></i>
+                </div>
+                <h3>Disponibilité</h3>
+                <p>Alternance : 2 semaines/2 semaines<br>Stage : Avril 2026, 2 mois minimum</p>
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+
+        </div>
+      </section>
+      <!--/Contact Section-->
+    </main>
+
+    <footer id="footer" class="footer dark-background">
+      <div class="container">
+        <h3 class="sitename">Réseaux Sociaux</h3>
+        <p></p>
+        <div class="social-links d-flex justify-content-center">
+          <a href="https://github.com/Hichem-Br"><i class="bi bi-github"></i></a>
+          <a href="https://www.linkedin.com/in/hichem-bensabeur/"><i class="bi bi-linkedin"></i></a>
+          <a href="mailto:Hichem.bnbr@gmail.com"><i class="bi bi-envelope"></i></a>
+        </div>
+        <div class="container">
+          <div class="copyright">
+            <span></span> <strong class="px-1 sitename">Mohamed-Hichem Bensabeur</strong> <span></span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+        class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Sélectionne tous les liens de navigation internes
+        document.querySelectorAll('a.scrollto[href^="#"]').forEach(link => {
+          link.addEventListener('click', e => {
+            e.preventDefault(); // bloque la modification du hash dans l'URL
+            const targetId = link.getAttribute('href');
+            const target = document.querySelector(targetId);
+
+            if (target) {
+              // Scroll fluide manuel
+              window.scrollTo({
+                top: target.offsetTop - 60, // ajuste selon la hauteur du header
+                behavior: "smooth"
+              });
+            }
+
+            // Ferme le menu mobile s'il est ouvert
+            const nav = document.querySelector('#navbar');
+            if (nav && nav.classList.contains('navbar-mobile')) {
+              nav.classList.remove('navbar-mobile');
+              const toggle = document.querySelector('.mobile-nav-toggle');
+              if (toggle) toggle.classList.toggle('bi-x');
+            }
+          });
+        });
+      });
+
+      // Language selector toggle
+      function toggleLanguageMenu(event) {
+        event.preventDefault();
+        event.stopPropagation();
+        const selector = event.target.closest('.language-selector');
+        selector.classList.toggle('active');
+      }
+
+      // Close language menu when clicking outside
+      document.addEventListener('click', function (event) {
+        const selectors = document.querySelectorAll('.language-selector');
+        selectors.forEach(selector => {
+          if (!selector.contains(event.target)) {
+            selector.classList.remove('active');
+          }
+        });
+      });
+    </script>
+
+    <style>
+      /* Language Selector Styles */
+      .language-selector {
+        position: relative;
+        display: inline-block;
+      }
+
+      .language-selector .lang-button {
+        background: var(--accent-color);
+        color: var(--contrast-color);
+        padding: 8px 16px;
+        border-radius: 20px;
+        border: none;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        transition: all 0.3s ease;
+      }
+
+      .language-selector .lang-button:hover {
+        background: color-mix(in srgb, var(--accent-color), black 10%);
+        transform: translateY(-2px);
+      }
+
+      .language-selector .lang-button i {
+        font-size: 12px;
+        transition: transform 0.3s ease;
+      }
+
+      .language-selector.active .lang-button i {
+        transform: rotate(180deg);
+      }
+
+      .language-selector .lang-dropdown {
+        position: absolute;
+        top: calc(100% + 8px);
+        right: 0;
+        background: var(--surface-color);
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        min-width: 150px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
+        z-index: 1000;
+      }
+
+      .language-selector.active .lang-dropdown {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+
+      .language-selector .lang-option {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 16px;
+        color: var(--default-color);
+        text-decoration: none;
+        transition: all 0.3s ease;
+        border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+      }
+
+      .language-selector .lang-option:first-child {
+        border-radius: 12px 12px 0 0;
+      }
+
+      .language-selector .lang-option:last-child {
+        border-bottom: none;
+        border-radius: 0 0 12px 12px;
+      }
+
+      .language-selector .lang-option:hover {
+        background: color-mix(in srgb, var(--accent-color), transparent 95%);
+        color: var(--accent-color);
+      }
+
+      .language-selector .lang-option.active {
+        background: color-mix(in srgb, var(--accent-color), transparent 90%);
+        color: var(--accent-color);
+        font-weight: 600;
+      }
+
+      .language-selector .lang-flag {
+        font-size: 20px;
+      }
+    </style>
+
+  </body>
+
+</html>
